@@ -1,26 +1,26 @@
-# Projet_12
+Projet de Classification Automatique d'Articles sur une Place de Marché
+Introduction
+Sur notre place de marché, les vendeurs postent des articles avec des photos et des descriptions, mais l'attribution manuelle des catégories est peu fiable. Pour améliorer l'expérience utilisateur, nous avons entrepris d'automatiser cette tâche en étudiant la faisabilité d'un moteur de classification des articles.
 
-mission est de réaliser, dans une première itération, une étude de faisabilité d'un moteur de classification d'articles, basé sur une image et une description, pour l'automatisation de l'attribution de la catégorie de l'article.
+Mission
+La Lead Data Scientist, Linda, a chargé d'étudier la faisabilité d'un moteur de classification. Dans la première itération, nous avons effectué une analyse visuelle des descriptions textuelles et des images, démontrant la possibilité de regrouper automatiquement des produits de même catégorie.
 
-Tu dois analyser les descriptions textuelles et les images des produits, au travers des étapes suivantes : 
+Étapes de l'Analyse
+Prétraitement des données textuelles et d'image : Utilisation de différentes approches telles que bag-of-words, TF-IDF, Word2Vec, Glove, FastText, BERT et USE pour les données textuelles, et SIFT/ORB/SURF et CNN Transfer Learning pour les images.
 
-Un prétraitement des données texte ou image suivant le cas ;
-Une extraction de features ;
-Une réduction en 2 dimensions, afin de projeter les produits sur un graphique 2D, sous la forme de points dont la couleur correspondra à la catégorie réelle ;
-Analyse du graphique afin d’en déduire ou pas, à l’aide des descriptions ou des images, la faisabilité de regrouper automatiquement des produits de même catégorie ;
-Réalisation d’une mesure pour confirmer ton analyse visuelle, en calculant la similarité entre les catégories réelles et les catégories issues d’une segmentation en clusters.
-Pourrais-tu nous démontrer, par cette approche, la faisabilité de regrouper automatiquement des produits de même catégorie ?
+Réduction en 2 dimensions : Projection des produits sur un graphique 2D, coloré selon la catégorie réelle.
 
-Voici les contraintes : 
+Analyse visuelle : Étude du graphique pour évaluer la possibilité de regrouper automatiquement des produits de même catégorie.
 
-Afin d’extraire les features texte, il sera nécessaire de mettre en œuvre : 
-deux approches de type “bag-of-words”, comptage simple de mots et Tf-idf ;
-une approche de type word/sentence embedding classique avec Word2Vec (ou Glove ou FastText) ;
-une approche de type word/sentence embedding avec BERT ;
-une approche de type word/sentence embedding avec USE (Universal Sentence Encoder). 
-En pièce jointe, tu trouveras un exemple de mise en œuvre de ces approches d’extraction de features texte sur un autre dataset. Je t’invite à l’utiliser comme point de départ, cela va te faire gagner beaucoup de temps !
+Mesure de similarité : Calcul de la similarité entre les catégories réelles et les catégories issues d'une segmentation en clusters.
 
-Afin d’extraire les features image, il sera nécessaire de mettre en œuvre :
-un algorithme de type SIFT / ORB / SURF ;
-un algorithme de type CNN Transfer Learning.
-Concernant l’approche de type SIFT, je t’invite à regarder le webinaire que nous avons réalisé, disponible dans les ressources.
+Résultats
+La faisabilité de regrouper automatiquement des produits de même catégorie a été démontrée avec succès.
+
+Deuxième Itération
+Suite aux résultats positifs, Linda propose une deuxième itération pour réaliser une classification supervisée à partir des images, avec mise en place de la data augmentation pour optimiser le modèle.
+
+Livrables
+Notebooks : Contenant les fonctions pour le prétraitement, la feature extraction, l'étude de faisabilité, et la classification supervisée.
+Script Python : Pour tester l'API de collecte de produits à base de "champagne" et extraire les données dans un fichier CSV.
+Présentation de Soutenance : PowerPoint ou équivalent avec 30 slides maximum détaillant l'étude de faisabilité, la classification supervisée, et le test de l'API.
